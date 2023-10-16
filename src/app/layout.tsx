@@ -21,9 +21,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={saira.className}>
-				<Header/>
+				<Header />
 				{children}
-				</body>
+			</body>
 		</html>
 	);
 }
