@@ -1,5 +1,5 @@
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import { ProfileIcon } from "./profile-icon";
+import { ProfileIcon } from "./icons/profile-icon";
 import styled from "styled-components";
 
 const Container = styled.div`
