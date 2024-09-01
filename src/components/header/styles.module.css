@@ -1,0 +1,20 @@
+.tag_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 160px;
+}
+
+.tag_header > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+}
+
+.logo {
+	color: var(--logo-color);
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 150%;
+}

@@ -5,16 +5,17 @@ import { useFilter } from "./useFilter";
 import { mountQuery } from "@/utils/get-category-by-type";
 import { useDeferredValue } from "react";
 
-const apiUrl = "http://localhost:3333/" as string;
+const apiUrl = "http://localhost:3000/";
 
 const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> => {
-	//Update endpoint after back-end is ready
+
 	return axios.post(apiUrl, {
 		query,
 	});
 };
 
 export function useProducts() {
+
 	const { type, priority, search } = useFilter();
 	const searchDeferred = useDeferredValue(search)
 	const query = mountQuery(type, priority);
