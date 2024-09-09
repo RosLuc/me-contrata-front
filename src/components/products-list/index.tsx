@@ -1,19 +1,19 @@
 "use client";
 
 import styles from "./styles.module.css";
-import { useProducts } from "@/hooks/useProducts";
+import { useJobs } from "@/hooks/useJob";
 import { ProductCard } from "../product-card";
 
 export function ProductsList() {
-	const { data } = useProducts();
+	const { data } = useJobs();
 	return (
 		<div className={styles.list_container}>
-			{data?.map((product) => (
+			{data?.map((job) => (
 				<ProductCard
-					key={product.id}
-					title={product.name}
-					price={product.price_in_cents}
-					image={product.image_url}
+					key={job.id}
+					title={job.name}
+					price={job.price}
+					image="https://via.placeholder.com/150"
 				/>
 			))}
 		</div>

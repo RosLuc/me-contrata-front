@@ -49,9 +49,6 @@ export function FilterByPriority() {
 					<li onClick={() => handleUpdatePriority(PriorityTypes.MINOR_PRICE)}>
 						Preço Menor - Maior
 					</li>
-					<li onClick={() => handleUpdatePriority(PriorityTypes.POPULARITY)}>
-						Mais Vendidos
-					</li>
 				</ul>
 			)}
 		</div>

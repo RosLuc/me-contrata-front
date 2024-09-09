@@ -7,11 +7,11 @@ export const FilterContext = createContext({
 	search: "",
 	page: 0,
 	type: FilterType.ALL,
-  priority: PriorityTypes.NEWS,
-  setPriority: (value: PriorityTypes) => {},
-	setSearch: (value: string) => {},
-	setPage: (value: number) => {},
-	setType: (value: FilterType) => {},
+	priority: PriorityTypes.NEWS,
+	setPriority: (value: PriorityTypes) => { },
+	setSearch: (value: string) => { },
+	setPage: (value: number) => { },
+	setType: (value: FilterType) => { },
 });
 
 interface ProviderProps {
@@ -22,7 +22,7 @@ export function FilterContextProvider({ children }: ProviderProps) {
 	const [search, setSearch] = useState("");
 	const [page, setPage] = useState(0);
 	const [type, setType] = useState(FilterType.ALL);
-	const [priority, setPriority] = useState(PriorityTypes.POPULARITY);
+	const [priority, setPriority] = useState(PriorityTypes.NEWS);
 
 	return (
 		<FilterContext.Provider
