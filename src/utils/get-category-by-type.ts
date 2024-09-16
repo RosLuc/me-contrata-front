@@ -28,7 +28,7 @@ export function getFieldByPriority(priority: PriorityTypes) {
   }
 }
 
-export const mountQuery = (type: FilterType, priority: PriorityTypes) => {
+export function mountQuery(type: FilterType, priority: PriorityTypes) {
 
   const category = getCategoryByType(type);
   const field = getFieldByPriority(priority);

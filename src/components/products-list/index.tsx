@@ -5,7 +5,13 @@ import { useJobs } from "@/hooks/useJob";
 import { ProductCard } from "../product-card";
 
 export function ProductsList() {
-	const { data } = useJobs();
+	const { data, isPending } = useJobs();
+
+	if (isPending) {
+
+		return;
+	}
+
 	return (
 		<div className={styles.list_container}>
 			{data?.map((job) => (
